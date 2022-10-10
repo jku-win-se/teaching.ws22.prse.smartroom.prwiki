@@ -1,0 +1,11 @@
+Table User as u {
+    userId int [pk, increment] //auto-increment
+    fullname varchar
+    created_at timestamp
+    countryId int [ref:  > c.countryId] //many-to-one
+}
+
+Table Country as c {
+   countryId int [pk, increment] //auto-increment
+   countryName varchar
+}
